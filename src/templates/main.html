@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP8266 Controller</title>
+</head>
+<body>
+    <h1>Dorm Automation</h1>
+    <form method="POST" action="/sendDoorState">
+        <button name="doorState" value="Open_Door">Open Door</button>
+        <br>
+        <button name="doorState" value="Close_Door">Close Door</button>
+        <br>
+    </form>
+    <form method="POST" action="/sendTemp">
+        <label for="tempInput">Temperature</label>
+        <input type="number" id="tempInput" name="tempInput">
+        <button type="setTemp">Set Temperature</button>
+    </form>
+    <form method="POST" action="/sendLightState">
+        <button name="ledState" value="LED_on">Turn on light</button>
+        <br>
+	    <button name="ledState" value="LED_off">Turn off light</button>
+        <br>
+    </form>
+    <form action="/logout">
+        <button>Logout</button>
+    </form>
+</body>
+</html>
+

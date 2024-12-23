@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Light and Door Control</title>
+</head>
+<body>
+    <h1>Home Automation Simulation</h1>
+
+    <form method="POST">
+        <p>Light is currently: <strong>{{ light_state }}</strong></p>
+        <button type="submit" name="toggle_light">Toggle Light</button>
+        
+        <p>Door is currently: <strong>{{ door_state }}</strong></p>
+        <button type="submit" name="toggle_door">Toggle Door</button>
+        
+        <p>Enter Temperature:</p>
+        <input type="text" id="temperature_field" name="temperature_field" value="{{ temperature }}">
+        <button type="submit">Set Temperature</button>
+    </form>
+
+    {% if temperature %}
+        <p>Current Temperature: <strong>{{ temperature }}°F</strong></p>
+    {% endif %}
+</body>
+</html>
